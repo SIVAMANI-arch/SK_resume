@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Endpoint Not Found | Sivamani K</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #0f172a;
+      --border: rgba(255, 255, 255, 0.1);
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --accent: #38bdf8;
+      --danger: #ef4444;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Ambient cyber grid */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: 
+        radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 40px 40px, 40px 40px;
+      pointer-events: none;
+    }
+
+    .error-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 3rem 2.5rem;
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      position: relative;
+      z-index: 2;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: var(--danger);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      margin-bottom: 1.5rem;
+    }
+
+    .glitch-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 6rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      background: linear-gradient(135deg, #ef4444 0%, #ec4899 50%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.75rem;
+    }
+
+    h1.title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.85rem;
+    }
+
+    p.desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    /* Terminal output snippet */
+    .terminal-box {
+      background: rgba(3, 7, 18, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      text-align: left;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      margin-bottom: 2rem;
+      color: #cbd5e1;
+    }
+
+    .t-err { color: #f87171; }
+    .t-info { color: #38bdf8; }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.65rem 1.35rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .countdown-text {
+      margin-top: 1.5rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="error-card">
+    <div class="status-badge">
+      <span>●</span> <span>HTTP_STATUS_404: RESOURCE_UNAVAILABLE</span>
+    </div>
+
+    <div class="glitch-code">404</div>
+    <h1 class="title">Endpoint Not Found in System</h1>
+    <p class="desc">
+      The requested route does not exist or GitHub Pages is still completing its initial build deployment.
+    </p>
+
+    <div class="terminal-box">
+      <div><span class="t-err">[FAULT]</span> Routing table lookup failed for URL path.</div>
+      <div><span class="t-info">[INFO]</span> Candidate nodes: <strong>/index.html</strong> (Portfolio) | <strong>/resume/</strong> (Interactive CV)</div>
+      <div><span class="t-info">[SYSTEM]</span> Auto-redirect sequence initialized...</div>
+    </div>
+
+    <div class="btn-group">
+      <a href="./index.html" class="btn btn-primary" id="home-link">
+        <span>⚡ Go to Portfolio Home</span>
+      </a>
+      <a href="./resume/index.html" class="btn btn-secondary">
+        <span>📄 Open Interactive Resume</span>
+      </a>
+    </div>
+
+    <div class="countdown-text" id="countdown-msg">
+      Redirecting to portfolio in <span id="timer">5</span> seconds...
+    </div>
+  </div>
+
+  <script>
+    let seconds = 5;
+    const timerEl = document.getElementById('timer');
+    const interval = setInterval(() => {
+      seconds--;
+      if (timerEl) timerEl.innerText = seconds;
+      if (seconds <= 0) {
+        clearInterval(interval);
+        window.location.href = './index.html';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
