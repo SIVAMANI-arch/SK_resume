@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sivamani K - Professional Resume</title>
+  <title>Sivamani K - Professional Resume &amp; Interactive CV</title>
+  <meta name="description" content="Professional Resume of Sivamani K - Full-Stack Software Engineer with verified production deployments on Render, PostgreSQL, React, and Python Flask.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #f8fafc;
       --card-bg: #ffffff;
       --text-main: #0f172a;
-      --text-muted: #475569;
+      --text-muted: #334155;
       --text-light: #64748b;
       --border: #e2e8f0;
       --primary: #2563eb;
@@ -20,97 +21,271 @@
       --primary-light: #eff6ff;
       --accent: #0284c7;
       --tag-bg: #f1f5f9;
-      --tag-text: #334155;
-      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+      --tag-text: #1e293b;
+      --success: #059669;
+      --success-bg: #ecfdf5;
+      --success-border: #a7f3d0;
+      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      --highlight-bg: #fef08a;
+      --highlight-border: #facc15;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    [data-theme="dark"] {
+      --bg: #090d16;
+      --card-bg: #0f172a;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-light: #94a3b8;
+      --border: rgba(255, 255, 255, 0.1);
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --primary-light: rgba(99, 102, 241, 0.15);
+      --accent: #38bdf8;
+      --tag-bg: rgba(255, 255, 255, 0.06);
+      --tag-text: #e2e8f0;
+      --success: #34d399;
+      --success-bg: rgba(16, 185, 129, 0.15);
+      --success-border: rgba(16, 185, 129, 0.35);
+      --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.6);
+      --highlight-bg: rgba(234, 179, 8, 0.25);
+      --highlight-border: #eab308;
     }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg);
       color: var(--text-main);
       line-height: 1.55;
-      padding: 2.5rem 1rem;
+      padding: 1.75rem 1rem 3rem 1rem;
       -webkit-font-smoothing: antialiased;
+      transition: background-color 0.25s, color 0.25s;
     }
 
-    /* Floating Action Bar */
-    .action-bar {
-      max-width: 860px;
-      margin: 0 auto 1.5rem auto;
+    /* Top Floating Navigation */
+    .top-nav {
+      max-width: 900px;
+      margin: 0 auto 1.25rem auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #1e293b;
-      color: #fff;
-      padding: 0.75rem 1.25rem;
-      border-radius: 12px;
-      box-shadow: var(--shadow-lg);
-    }
-
-    .action-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .action-btn-group {
-      display: flex;
+      flex-wrap: wrap;
       gap: 0.75rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      border-radius: 8px;
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .nav-controls {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      background: #3b82f6;
+      background: var(--primary);
       color: #fff;
       padding: 0.5rem 1rem;
       border-radius: 8px;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: 600;
       text-decoration: none;
       border: none;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.2s;
     }
 
     .btn:hover {
-      background: #2563eb;
+      background: var(--primary-dark);
       transform: translateY(-1px);
     }
 
     .btn-secondary {
-      background: #334155;
+      background: var(--tag-bg);
+      color: var(--text-main);
+      border: 1px solid var(--border);
     }
 
     .btn-secondary:hover {
-      background: #475569;
+      background: rgba(255, 255, 255, 0.15);
+      border-color: var(--primary);
     }
 
-    /* Resume Container (A4 Proportions) */
+    /* View Switcher Tabs */
+    .tab-bar {
+      max-width: 900px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.3rem;
+      gap: 0.3rem;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      flex: 1;
+      min-width: 140px;
+      padding: 0.55rem 0.85rem;
+      background: transparent;
+      border: none;
+      border-radius: 7px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .tab-btn.active {
+      background: var(--card-bg);
+      color: var(--primary);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Verification Badge Banner */
+    .verification-strip {
+      max-width: 900px;
+      margin: 0 auto 1.25rem auto;
+      background: var(--success-bg);
+      border: 1px solid var(--success-border);
+      color: var(--success);
+      padding: 0.65rem 1.25rem;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .verification-items {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .v-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* Interactive Skill Filter Bar */
+    .skill-filter-bar {
+      max-width: 900px;
+      margin: 0 auto 1.25rem auto;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+    }
+
+    .filter-label {
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-right: 0.25rem;
+    }
+
+    .filter-chip {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: all 0.15s;
+    }
+
+    .filter-chip:hover, .filter-chip.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* Resume Document Wrapper */
     .resume-container {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
       background: var(--card-bg);
       border-radius: 16px;
-      padding: 2.75rem 3rem;
+      padding: 3rem;
       box-shadow: var(--shadow-lg);
       border: 1px solid var(--border);
       position: relative;
     }
 
-    /* Header Section */
+    /* Code & Plaintext Viewers */
+    .code-view-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      display: none;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .code-view-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94a3b8;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+    }
+
+    .code-pre {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #e2e8f0;
+      white-space: pre-wrap;
+      word-break: break-all;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    /* Resume Sections Styling */
     .header {
-      border-bottom: 2px solid #e2e8f0;
+      border-bottom: 2px solid var(--border);
       padding-bottom: 1.5rem;
       margin-bottom: 1.5rem;
     }
@@ -124,15 +299,15 @@
     }
 
     h1.name {
-      font-size: 2.25rem;
+      font-size: 2.35rem;
       font-weight: 800;
       letter-spacing: -0.03em;
-      color: #0f172a;
+      color: var(--text-main);
       line-height: 1.1;
     }
 
     .professional-title {
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       font-weight: 600;
       color: var(--primary);
       margin-top: 0.35rem;
@@ -141,9 +316,9 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 0.5rem 1rem;
-      margin-top: 1rem;
+      margin-top: 1.1rem;
       font-size: 0.88rem;
       color: var(--text-muted);
     }
@@ -173,7 +348,6 @@
       flex-shrink: 0;
     }
 
-    /* Section Headers */
     .section {
       margin-bottom: 1.6rem;
     }
@@ -183,8 +357,8 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.07em;
-      color: #0f172a;
-      border-bottom: 1.5px solid #cbd5e1;
+      color: var(--text-main);
+      border-bottom: 1.5px solid var(--border);
       padding-bottom: 0.35rem;
       margin-bottom: 0.85rem;
       display: flex;
@@ -200,14 +374,13 @@
       border-radius: 2px;
     }
 
-    /* Summary */
     .summary-text {
       font-size: 0.92rem;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
-    /* Technical Skills */
+    /* Skills Grid */
     .skills-grid {
       display: grid;
       grid-template-columns: 140px 1fr;
@@ -218,7 +391,7 @@
 
     .skill-category {
       font-weight: 600;
-      color: #1e293b;
+      color: var(--text-main);
     }
 
     .skill-items {
@@ -235,16 +408,20 @@
       border-radius: 6px;
       margin: 0.15rem 0.2rem 0.15rem 0;
       font-weight: 500;
-      border: 1px solid #e2e8f0;
+      border: 1px solid var(--border);
     }
 
     /* Projects */
     .project-card {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.35rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px dashed var(--border);
     }
 
     .project-card:last-child {
       margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
     }
 
     .project-header {
@@ -264,34 +441,32 @@
     }
 
     .project-name {
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 700;
-      color: #0f172a;
+      color: var(--text-main);
     }
 
     .badge-live {
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
-      background: #ecfdf5;
-      color: #059669;
+      background: var(--success-bg);
+      color: var(--success);
       font-size: 0.72rem;
       font-weight: 700;
       padding: 0.15rem 0.55rem;
       border-radius: 9999px;
-      border: 1px solid #a7f3d0;
+      border: 1px solid var(--success-border);
       text-decoration: none;
     }
 
-    .badge-live:hover {
-      background: #d1fae5;
-    }
+    .badge-live:hover { filter: brightness(0.95); }
 
     .badge-live::before {
       content: "";
       width: 6px;
       height: 6px;
-      background-color: #10b981;
+      background-color: var(--success);
       border-radius: 50%;
       display: inline-block;
     }
@@ -311,19 +486,17 @@
       gap: 0.25rem;
     }
 
-    .project-links a:hover {
-      text-decoration: underline;
-    }
+    .project-links a:hover { text-decoration: underline; }
 
     .project-tech {
-      font-size: 0.83rem;
+      font-size: 0.82rem;
       font-family: 'JetBrains Mono', monospace;
-      color: #4338ca;
-      background: #eef2ff;
+      color: var(--primary);
+      background: var(--primary-light);
       padding: 0.15rem 0.5rem;
       border-radius: 4px;
       display: inline-block;
-      margin-bottom: 0.45rem;
+      margin-bottom: 0.5rem;
       font-weight: 500;
     }
 
@@ -336,10 +509,12 @@
     .bullet-list li {
       position: relative;
       padding-left: 1.25rem;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.45rem;
       font-size: 0.89rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.55;
+      transition: background 0.2s, padding 0.2s;
+      border-radius: 4px;
     }
 
     .bullet-list li::before {
@@ -352,8 +527,16 @@
     }
 
     .bullet-list li strong {
-      color: #1e293b;
+      color: var(--text-main);
       font-weight: 600;
+    }
+
+    /* Highlighted bullet when filtering skills */
+    .bullet-list li.highlighted {
+      background: var(--highlight-bg);
+      border-left: 3px solid var(--highlight-border);
+      padding-left: 1rem;
+      color: var(--text-main);
     }
 
     /* Education */
@@ -368,12 +551,12 @@
     .edu-degree {
       font-weight: 700;
       font-size: 0.98rem;
-      color: #0f172a;
+      color: var(--text-main);
     }
 
     .edu-institution {
-      font-size: 0.9rem;
-      color: var(--primary-dark);
+      font-size: 0.92rem;
+      color: var(--primary);
       font-weight: 600;
     }
 
@@ -389,29 +572,36 @@
       color: var(--text-muted);
     }
 
-    /* Print Optimization */
+    /* Print Optimization (Strict A4 Paper Output) */
     @media print {
       body {
-        background: #ffffff;
-        padding: 0;
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
       }
-      .action-bar {
+      .top-nav, .tab-bar, .verification-strip, .skill-filter-bar, .code-view-container {
         display: none !important;
       }
       .resume-container {
-        border: none;
-        box-shadow: none;
-        padding: 0.5cm 0.75cm;
-        max-width: 100%;
-        margin: 0;
-        border-radius: 0;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0.4cm 0.7cm !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        background: #ffffff !important;
       }
       a {
         text-decoration: none !important;
-        color: inherit !important;
+        color: #000000 !important;
       }
       .badge-live {
-        border-color: #ccc;
+        border-color: #888 !important;
+        color: #000 !important;
+        background: transparent !important;
+      }
+      .project-tech {
+        background: #f1f5f9 !important;
+        color: #1e293b !important;
       }
       .section {
         margin-bottom: 1.15rem;
@@ -419,25 +609,69 @@
       }
       .project-card {
         page-break-inside: avoid;
+        border-bottom: 1px solid #e2e8f0 !important;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating Quick Actions -->
-  <div class="action-bar">
-    <div class="action-title">
-      <span>📄 SIVAMANI K &mdash; Professional Resume</span>
+  <!-- Top Floating Controls -->
+  <nav class="top-nav">
+    <a href="../index.html" class="back-link">
+      <span>← Back to Portfolio Showcase</span>
+    </a>
+
+    <div class="nav-controls">
+      <button class="btn btn-secondary" onclick="toggleTheme()" id="theme-btn">
+        <span>🌓 Theme</span>
+      </button>
+      <button class="btn btn-secondary" onclick="copyContact()" id="copy-btn">
+        <span>📋 Copy Email</span>
+      </button>
+      <button class="btn" onclick="printResume()">
+        <span>🖨️ Print / Save as PDF</span>
+      </button>
     </div>
-    <div class="action-btn-group">
-      <button class="btn btn-secondary" onclick="copyContact()">📋 Copy Email</button>
-      <button class="btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
-    </div>
+  </nav>
+
+  <!-- View Switcher Tabs -->
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchView('visual')">
+      <span>✨ Interactive CV</span>
+    </button>
+    <button class="tab-btn" onclick="switchView('plain')">
+      <span>📄 ATS Plain Text</span>
+    </button>
+    <button class="tab-btn" onclick="switchView('latex')">
+      <span>📐 LaTeX Code</span>
+    </button>
   </div>
 
-  <!-- Resume Container -->
-  <div class="resume-container">
+  <!-- Verification Strip -->
+  <div class="verification-strip" id="verification-strip">
+    <div class="verification-items">
+      <span class="v-item">✓ <strong>Verified GitHub:</strong> SIVAMANI-arch</span>
+      <span class="v-item">✓ <strong>Institution:</strong> Sri Ramakrishna Institute of Technology (71382502162)</span>
+      <span class="v-item">✓ <strong>Render Live Deployed:</strong> HVMS &amp; BankVCS</span>
+    </div>
+    <span>Status: <strong>Ready for Hire</strong></span>
+  </div>
+
+  <!-- Interactive Skill Filter Bar -->
+  <div class="skill-filter-bar" id="skill-filter-bar">
+    <span class="filter-label">⚡ Highlight Skill in Projects:</span>
+    <button class="filter-chip active" onclick="filterBySkill('all')">All</button>
+    <button class="filter-chip" onclick="filterBySkill('react')">React.js</button>
+    <button class="filter-chip" onclick="filterBySkill('node')">Node.js / Express</button>
+    <button class="filter-chip" onclick="filterBySkill('python')">Python / Flask</button>
+    <button class="filter-chip" onclick="filterBySkill('db')">PostgreSQL &amp; Prisma</button>
+    <button class="filter-chip" onclick="filterBySkill('security')">SHA-256 &amp; RBAC</button>
+    <button class="filter-chip" onclick="filterBySkill('qr')">QR Gate Clearance</button>
+  </div>
+
+  <!-- VIEW 1: Visual Resume Document -->
+  <main class="resume-container" id="visual-resume">
     
     <!-- HEADER -->
     <header class="header">
@@ -472,7 +706,7 @@
     <section class="section">
       <div class="section-title"><span class="bar"></span>Professional Summary</div>
       <p class="summary-text">
-        High-impact Full-Stack Software Engineer with proven hands-on experience architecting and deploying production-ready web platforms, relational database systems, and secure audit pipelines. Specializes in building modern web applications with <strong>React.js, Node.js/Express, Python/Flask, and PostgreSQL</strong>. Experienced in designing 3NF normalized data models, Git-like non-destructive entity version control, cryptographic SHA-256 audit chaining, and real-time Role-Based Access Control (RBAC). Passionate about scalable architecture, high availability, and clean, maintainable code.
+        High-impact Full-Stack Software Engineer with proven hands-on experience architecting, testing, and deploying production-ready web platforms, relational database systems, and secure audit pipelines. Specializes in building modern web applications with <strong>React.js, Node.js/Express, Python/Flask, and PostgreSQL</strong>. Experienced in designing 3NF normalized data models, Git-like non-destructive entity version control, cryptographic SHA-256 audit chaining, and real-time Role-Based Access Control (RBAC). Passionate about high availability, scalable backend architecture, and clean, maintainable code.
       </p>
     </section>
 
@@ -562,11 +796,11 @@
         </div>
         <div class="project-tech">React.js, Node.js, Express.js, PostgreSQL, Prisma ORM, JWT, QR Codes, Tailwind CSS</div>
         <ul class="bullet-list">
-          <li><strong>Production Full-Stack Monorepo:</strong> Designed and deployed an end-to-end multi-tier visitor security platform serving 5 role personas: Super Admin, Hostel Admin, Wardens, Security Guards, and Students.</li>
-          <li><strong>Digital QR Pass &amp; Checkpoint Workflow:</strong> Engineered dynamic cryptographic pass token generation with instant QR validation at security gates, reducing visitor clearance latency by over 70%.</li>
-          <li><strong>Walk-In Registration &amp; Webcam Pipeline:</strong> Implemented real-time gate walk-in registration capturing base64 photo IDs and camera snapshots with immediate host student push notification &amp; approval interface.</li>
-          <li><strong>Relational 3NF Architecture &amp; Audit Trail:</strong> Structured 3NF database schema via Prisma ORM featuring real-time blacklist checks, visitor history tracking, and automated PDF &amp; Excel reporting engines (`pdfkit`, `exceljs`).</li>
-          <li><strong>Modern Reactive Interface:</strong> Created responsive analytics dashboards utilizing Vite, React 18, Tailwind CSS, and Recharts with role-guarded routes and zero token leakage.</li>
+          <li data-skills="node security"><strong>Production Full-Stack Monorepo:</strong> Designed and deployed an end-to-end multi-tier visitor security platform serving 5 role personas: Super Admin, Hostel Admin, Wardens, Security Guards, and Students.</li>
+          <li data-skills="qr security"><strong>Digital QR Pass &amp; Checkpoint Workflow:</strong> Engineered dynamic cryptographic pass token generation with instant QR validation at security gates, reducing visitor clearance latency by over 70%.</li>
+          <li data-skills="react node"><strong>Walk-In Registration &amp; Webcam Pipeline:</strong> Implemented real-time gate walk-in registration capturing base64 photo IDs and camera snapshots with immediate host student push notification &amp; approval interface.</li>
+          <li data-skills="db security"><strong>Relational 3NF Architecture &amp; Audit Trail:</strong> Structured 3NF database schema via Prisma ORM featuring real-time blacklist checks, visitor history tracking, and automated PDF &amp; Excel reporting engines (<code>pdfkit</code>, <code>exceljs</code>).</li>
+          <li data-skills="react"><strong>Modern Reactive Interface:</strong> Created responsive analytics dashboards utilizing Vite, React 18, Tailwind CSS, and Recharts with role-guarded routes and zero token leakage.</li>
         </ul>
       </div>
 
@@ -585,10 +819,10 @@
         </div>
         <div class="project-tech">Python 3, Flask, SQLAlchemy, SQLite3, SHA-256 Chaining, Bootstrap 5, Chart.js</div>
         <ul class="bullet-list">
-          <li><strong>Git-Like Database Version Control:</strong> Architected non-destructive, snapshot-based versioning for banking records (`v1 → v2 → v3 → RESTORE(v1) → v4`) alongside side-by-side JSON field-level diff inspection.</li>
-          <li><strong>Cryptographic SHA-256 Tamper-Evident Chaining:</strong> Implemented blockchain-inspired SHA-256 hash chaining across audit log streams with real-time on-demand mathematical continuity verification.</li>
-          <li><strong>Transparent Risk Intelligence Engine:</strong> Developed deterministic 0–100 transaction threat scoring evaluating transaction velocity, balance depletion rates, and beneficiary cooling-off states.</li>
-          <li><strong>Maker-Checker Governance &amp; Multi-Portal Isolation:</strong> Implemented strict dual-control authorization for entity rollbacks, PBKDF2 password hashing, and role isolation across Customer, Staff, and Admin portals.</li>
+          <li data-skills="python db"><strong>Git-Like Database Version Control:</strong> Architected non-destructive, snapshot-based versioning for banking records (<code>v1 → v2 → v3 → RESTORE(v1) → v4</code>) alongside side-by-side JSON field-level diff inspection.</li>
+          <li data-skills="security python"><strong>Cryptographic SHA-256 Tamper-Evident Chaining:</strong> Implemented blockchain-inspired SHA-256 hash chaining across audit log streams with real-time on-demand mathematical continuity verification.</li>
+          <li data-skills="python security"><strong>Transparent Risk Intelligence Engine:</strong> Developed deterministic 0–100 transaction threat scoring evaluating transaction velocity, balance depletion rates, and beneficiary cooling-off states.</li>
+          <li data-skills="security python"><strong>Maker-Checker Governance &amp; Multi-Portal Isolation:</strong> Implemented strict dual-control authorization for entity rollbacks, PBKDF2 password hashing, and role isolation across Customer, Staff, and Admin portals.</li>
         </ul>
       </div>
 
@@ -620,13 +854,199 @@
       </ul>
     </section>
 
-  </div>
+  </main>
+
+  <!-- VIEW 2: ATS Plain Text Markdown View -->
+  <section class="code-view-container" id="plain-view">
+    <div class="code-view-header">
+      <span>Plain Text ATS Markdown Resume</span>
+      <button class="btn btn-sm btn-secondary" onclick="copyPlaintext()">📋 Copy All Text</button>
+    </div>
+    <pre class="code-pre" id="plain-content"># SIVAMANI K
+Full-Stack Software Engineer | Backend &amp; Distributed Systems Enthusiast
+Coimbatore, Tamil Nadu, India | 71382502162.sivamani@sritcbe.ac.in
+GitHub: https://github.com/SIVAMANI-arch | LinkedIn: https://www.linkedin.com/in/sivamani-k-454186397
+
+--------------------------------------------------------------------------------
+
+PROFESSIONAL SUMMARY
+Results-driven Full-Stack Software Engineer with proven hands-on expertise architecting, testing, and deploying production-grade web systems, relational databases, and secure audit pipelines. Core competencies in React.js, Node.js/Express, Python/Flask, and PostgreSQL. Architect of live-deployed platforms including a Hostel Visitor Management System (HVMS) (deployed on Render, featuring multi-role RBAC, dynamic QR gate passes, 3NF schema, and audit logs) and contributor to BankVCS 2.0 (featuring Git-like database entity version control and tamper-evident SHA-256 audit chaining). Adept at building scalable RESTful architectures, enforcing robust cybersecurity standards, and shipping responsive user interfaces.
+
+--------------------------------------------------------------------------------
+
+TECHNICAL SKILLS
+- Programming Languages: JavaScript (ES6+), Python 3, SQL (PostgreSQL, SQLite), HTML5, CSS3
+- Frontend Stack: React.js, Vite, Tailwind CSS, Bootstrap 5, Recharts, Chart.js, Lucide Icons, Axios, Responsive Web Design
+- Backend &amp; APIs: Node.js, Express.js, Flask (Python), RESTful API Design, MVC Pattern, Middleware Architecture
+- Databases &amp; ORMs: PostgreSQL, SQLite3, Prisma ORM, SQLAlchemy, 3NF Schema Normalization, Migrations
+- Security &amp; System Design: Role-Based Access Control (RBAC), JWT Authentication, SHA-256 Cryptographic Hash Chaining, PBKDF2 / BCrypt, Maker-Checker Dual-Authorization, CSRF Protection, Helmet
+- DevOps &amp; Developer Tools: Git, GitHub, Render (Production Cloud Hosting), Monorepo Architecture, Linux / Arch Linux, Postman, Vite, Pytest
+
+--------------------------------------------------------------------------------
+
+KEY ENGINEERING PROJECTS
+
+1. Hostel Visitor Management System (HVMS) | Full-Stack Developer
+Tech Stack: React.js, Node.js, Express.js, PostgreSQL, Prisma ORM, JWT, QR Codes, Tailwind CSS
+Live Production App: https://hostelvistor.onrender.com/login | GitHub: https://github.com/SIVAMANI-arch/Hostelvistor
+- Production-Grade Monorepo: Architected and deployed an end-to-end multi-role web platform serving 5 personas (Super Admin, Hostel Admin, Wardens, Security Guards, and Students) with strict RBAC boundary isolation.
+- Dynamic QR Code Pass System: Engineered dynamic cryptographic pass token generation with instant QR validation at security gates, reducing visitor clearance latency by over 70% and removing manual paper registers.
+- Real-Time Walk-In &amp; Photo Verification: Built a gate walk-in registration pipeline capturing webcam ID snapshots and sending push notifications to host students for live approve/deny decisions.
+- 3NF Normalized Relational Database: Designed a PostgreSQL schema with Prisma ORM to track visit history, enforce blacklist rules, and stream audit logs with automated PDF/Excel reporting (pdfkit, exceljs).
+- Modern Responsive Dashboard: Created a high-performance UI using Vite, React 18, Tailwind CSS, and Recharts analytics with zero credential leakage.
+
+2. BankVCS 2.0 – Secure Intelligent Banking &amp; Version Control System
+Tech Stack: Python 3, Flask 3, SQLAlchemy, SQLite3, SHA-256 Chaining, Bootstrap 5, Chart.js
+Live Production App: https://banking-application-version-control-4.onrender.com/ | GitHub: https://github.com/71382502157shreka-lgtm/banking-application-version-control
+- Git-Like Entity Version Control: Architected non-destructive, snapshot-based versioning for banking records (v1 -> v2 -> v3 -> RESTORE(v1) -> v4) with side-by-side JSON field-level diff inspection.
+- Cryptographic SHA-256 Audit Chaining: Implemented blockchain-style SHA-256 hash chaining across audit log streams with real-time on-demand mathematical continuity verification.
+- Rule-Based Risk Intelligence: Built a deterministic 0-100 transaction threat scoring engine evaluating transfer velocity, balance depletion rates, and beneficiary cooling-off states.
+- Maker-Checker Governance: Enforced administrative dual-control authorization for rollbacks, active session management, PBKDF2 password hashing, and role isolation across Customer, Staff, and Admin portals.
+
+--------------------------------------------------------------------------------
+
+EDUCATION
+Sri Ramakrishna Institute of Technology (Autonomous), Coimbatore, Tamil Nadu
+Bachelor of Engineering (B.E.)
+- Anna University Affiliated | Register No: 71382502162
+- Core Coursework: Data Structures &amp; Algorithms, Database Management Systems (DBMS), Object-Oriented Programming, Web Technologies, Operating Systems, Computer Networks, Software Engineering.
+    </pre>
+  </section>
+
+  <!-- VIEW 3: LaTeX Code View -->
+  <section class="code-view-container" id="latex-view">
+    <div class="code-view-header">
+      <span>Overleaf / LaTeX Template (Jake's Resume Style)</span>
+      <button class="btn btn-sm btn-secondary" onclick="copyLatex()">📋 Copy LaTeX Code</button>
+    </div>
+    <pre class="code-pre" id="latex-content">\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Sivamani K} \\ \vspace{2pt}
+    \small Coimbatore, Tamil Nadu, India $|$ \href{mailto:71382502162.sivamani@sritcbe.ac.in}{\underline{71382502162.sivamani@sritcbe.ac.in}} \\
+    \href{https://github.com/SIVAMANI-arch}{\underline{github.com/SIVAMANI-arch}} $|$
+    \href{https://www.linkedin.com/in/sivamani-k-454186397/}{\underline{linkedin.com/in/sivamani-k-454186397}} $|$
+    \href{https://hostelvistor.onrender.com/login}{\underline{hostelvistor.onrender.com}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Sri Ramakrishna Institute of Technology (Autonomous)}{Coimbatore, India}
+      {Bachelor of Engineering (B.E.) -- Anna University (Reg: 71382502162)}{Expected 2026/2027}
+  \resumeSubHeadingListEnd
+
+\section{Key Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Hostel Visitor Management System} $|$ \emph{React, Node, PostgreSQL, Prisma, QR}}{Live: \href{https://hostelvistor.onrender.com/login}{Render}}
+    \resumeProjectHeading
+      {\textbf{BankVCS 2.0 -- Banking \& Version Control} $|$ \emph{Python, Flask, SQLAlchemy, SHA-256}}{Live: \href{https://banking-application-version-control-4.onrender.com/}{Render}}
+  \resumeSubHeadingListEnd
+
+\end{document}</pre>
+  </section>
 
   <script>
+    // Tab switching
+    function switchView(view) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      const visual = document.getElementById('visual-resume');
+      const plain = document.getElementById('plain-view');
+      const latex = document.getElementById('latex-view');
+      const filters = document.getElementById('skill-filter-bar');
+      const strip = document.getElementById('verification-strip');
+
+      visual.style.display = 'none';
+      plain.style.display = 'none';
+      latex.style.display = 'none';
+
+      if (view === 'visual') {
+        visual.style.display = 'block';
+        filters.style.display = 'flex';
+        strip.style.display = 'flex';
+        document.querySelectorAll('.tab-btn')[0].classList.add('active');
+      } else if (view === 'plain') {
+        plain.style.display = 'block';
+        filters.style.display = 'none';
+        strip.style.display = 'none';
+        document.querySelectorAll('.tab-btn')[1].classList.add('active');
+      } else if (view === 'latex') {
+        latex.style.display = 'block';
+        filters.style.display = 'none';
+        strip.style.display = 'none';
+        document.querySelectorAll('.tab-btn')[2].classList.add('active');
+      }
+    }
+
+    // Interactive Skill Highlighting
+    function filterBySkill(skill) {
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const bullets = document.querySelectorAll('.bullet-list li[data-skills]');
+      bullets.forEach(b => {
+        b.classList.remove('highlighted');
+        if (skill === 'all') return;
+        const skills = b.getAttribute('data-skills') || '';
+        if (skills.includes(skill)) {
+          b.classList.add('highlighted');
+        }
+      });
+    }
+
+    // Print helper
+    function printResume() {
+      switchView('visual');
+      window.print();
+    }
+
+    // Theme Toggle
+    function toggleTheme() {
+      const root = document.documentElement;
+      const current = root.getAttribute('data-theme');
+      root.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+
+    // Copying helpers
     function copyContact() {
       const email = document.getElementById('primary-email').innerText;
       navigator.clipboard.writeText(email).then(() => {
-        alert("Email copied to clipboard: " + email);
+        alert("Email copied: " + email);
+      });
+    }
+
+    function copyPlaintext() {
+      const txt = document.getElementById('plain-content').innerText;
+      navigator.clipboard.writeText(txt).then(() => {
+        alert("Plain text ATS resume copied to clipboard!");
+      });
+    }
+
+    function copyLatex() {
+      const txt = document.getElementById('latex-content').innerText;
+      navigator.clipboard.writeText(txt).then(() => {
+        alert("LaTeX source code copied to clipboard!");
       });
     }
   </script>
