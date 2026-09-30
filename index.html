@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sivamani K | Full-Stack Software Engineer & Distributed Systems</title>
+  <meta name="description" content="Portfolio of Sivamani K - Full-Stack Software Engineer specializing in React, Node.js, Python/Flask, PostgreSQL, and secure cryptographic architectures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Sivamani.K <span class="logo-accent">/&gt;</span>
+      </a>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#architecture" class="nav-link">Architecture</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+          <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+
+        <a href="resume/index.html" target="_blank" class="btn btn-sm btn-outline">
+          <span>Resume</span>
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        </a>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Available for Engineering Roles &amp; Opportunities</span>
+        </div>
+
+        <h1 class="hero-title">
+          Architecting <span class="gradient-text">production-grade</span> systems &amp; data security.
+        </h1>
+
+        <p class="hero-subtitle">
+          Hi, I'm <strong>Sivamani K</strong> &mdash; a Full-Stack Software Engineer with deep hands-on expertise in building scalable web architectures, non-destructive database versioning, and cryptographic audit pipelines with <strong>React.js, Node.js, Python, and PostgreSQL</strong>.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Featured Projects</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Get in Touch</span>
+          </a>
+          <a href="https://github.com/SIVAMANI-arch" target="_blank" rel="noopener" class="btn btn-icon-only" title="GitHub Profile">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/sivamani-k-454186397/" target="_blank" rel="noopener" class="btn btn-icon-only" title="LinkedIn Profile">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-num">2+</div>
+          <div class="metric-label">Live Production Systems</div>
+          <div class="metric-desc">Deployed with CI/CD on Render</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">5</div>
+          <div class="metric-label">Multi-Role Portals</div>
+          <div class="metric-desc">Complete RBAC boundary isolation</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">100%</div>
+          <div class="metric-label">SHA-256 Audit Integrity</div>
+          <div class="metric-desc">Tamper-evident hash chaining</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">&gt;70%</div>
+          <div class="metric-label">Gate Clearance Speedup</div>
+          <div class="metric-desc">Automated dynamic QR passes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="section-padding" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Featured Work</div>
+        <h2 class="section-title">Production-Grade Applications</h2>
+        <p class="section-subtitle">Real systems built from architectural schema design to live cloud deployment.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: HVMS -->
+        <article class="project-card">
+          <div class="project-badge-row">
+            <span class="badge badge-accent">Production Monorepo</span>
+            <span class="badge badge-green">Live on Render</span>
+          </div>
+
+          <h3 class="project-title">Hostel Visitor Management System (HVMS)</h3>
+          
+          <p class="project-description">
+            An enterprise security and audit platform replacing manual paper registers with instantaneous QR code gate clearances, real-time webcam identity verification, and multi-portal governance.
+          </p>
+
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">⚡</span>
+              <span><strong>Dynamic QR Gate Scanner:</strong> Generates tamper-proof token passes validated at security gates in sub-second time.</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📷</span>
+              <span><strong>Webcam Walk-In Pipeline:</strong> Captures live webcam snapshots with instant student push notifications to approve entry.</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🛡️</span>
+              <span><strong>5-Tier Role Isolation:</strong> Super Admin, Hostel Admin, Wardens, Guards, and Students with strictly enforced JWT RBAC.</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📊</span>
+              <span><strong>3NF Schema &amp; Automated Reports:</strong> PostgreSQL + Prisma ORM tracking visits with direct PDF and Excel exports.</span>
+            </div>
+          </div>
+
+          <div class="tech-tags">
+            <span class="tech-pill">React.js</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Express</span>
+            <span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">Prisma ORM</span>
+            <span class="tech-pill">JWT</span>
+            <span class="tech-pill">Tailwind CSS</span>
+            <span class="tech-pill">QR Codes</span>
+            <span class="tech-pill">Recharts</span>
+          </div>
+
+          <div class="project-card-footer">
+            <a href="https://hostelvistor.onrender.com/login" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <span>Launch Live App</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+            <a href="https://github.com/SIVAMANI-arch/Hostelvistor" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub Repository</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: BankVCS -->
+        <article class="project-card">
+          <div class="project-badge-row">
+            <span class="badge badge-accent">Fintech &amp; Security</span>
+            <span class="badge badge-green">Live on Render</span>
+          </div>
+
+          <h3 class="project-title">BankVCS 2.0 – Secure Intelligent Banking</h3>
+          
+          <p class="project-description">
+            A resilient banking platform featuring Git-like database entity version control, blockchain-style SHA-256 audit chaining, deterministic risk scoring, and dual-control Maker-Checker governance.
+          </p>
+
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">🔀</span>
+              <span><strong>Git-Like Entity Versioning:</strong> Non-destructive snapshots (v1 → v2 → v3 → RESTORE(v1) → v4) with side-by-side JSON diffs.</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🔗</span>
+              <span><strong>SHA-256 Tamper-Evident Chain:</strong> Continuous audit log hashing with live mathematical integrity verification.</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🎯</span>
+              <span><strong>Risk Intelligence Engine:</strong> Rule-based 0–100 threat scoring evaluating transfer velocity and beneficiary cooling.</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">👥</span>
+              <span><strong>Maker-Checker Dual Control:</strong> Admin multi-party authorization required for all entity restorations.</span>
+            </div>
+          </div>
+
+          <div class="tech-tags">
+            <span class="tech-pill">Python 3</span>
+            <span class="tech-pill">Flask</span>
+            <span class="tech-pill">SQLAlchemy</span>
+            <span class="tech-pill">SQLite3</span>
+            <span class="tech-pill">SHA-256 Chaining</span>
+            <span class="tech-pill">PBKDF2</span>
+            <span class="tech-pill">Bootstrap 5</span>
+            <span class="tech-pill">Chart.js</span>
+            <span class="tech-pill">Pytest</span>
+          </div>
+
+          <div class="project-card-footer">
+            <a href="https://banking-application-version-control-4.onrender.com/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <span>Launch Live Portal</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+            <a href="https://github.com/71382502157shreka-lgtm/banking-application-version-control" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub Repository</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Terminal & Architecture Section -->
+  <section class="section-padding bg-alt" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">System Design</div>
+        <h2 class="section-title">Architectural Deep Dive</h2>
+        <p class="section-subtitle">How cryptographic hash chaining and gate tokenization operate in production.</p>
+      </div>
+
+      <div class="terminal-grid">
+        <!-- Interactive Terminal Simulator -->
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">sivamani@production-node:~</div>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">bankvcs --verify-hash-chain</span></div>
+            <div class="t-line t-dim">Initializing cryptographic verification on /data/audit.db...</div>
+            <div class="t-line t-dim">Block #101 [GENESIS] ➔ SHA: 4a8f10b3... [VALID]</div>
+            <div class="t-line t-dim">Block #102 [TRANSFER] ➔ Prev: 4a8f10b3... Current: b91c4d... [VALID]</div>
+            <div class="t-line t-dim">Block #103 [RESTORE]  ➔ Prev: b91c4d... Current: 7e2a90... [VALID]</div>
+            <div class="t-line t-success">✓ 103 blocks verified. Continuity intact. 0 anomalies detected.</div>
+            <div class="t-line">&nbsp;</div>
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">hvms --scan-pass --token PASS_TOKEN_5A1D6B8C</span></div>
+            <div class="t-line t-dim">Querying PostgreSQL cluster (Aryabhata Boys Hostel)...</div>
+            <div class="t-line t-info">Visitor: Rajesh Kumar | Host: Rohan Sharma (Block A1 - Room 101)</div>
+            <div class="t-line t-success">✓ PASS VALIDATED. Check-in timestamp recorded at Gate 1.</div>
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></div>
+          </div>
+        </div>
+
+        <!-- Concept Cards -->
+        <div class="architecture-cards">
+          <div class="arch-card">
+            <div class="arch-number">01</div>
+            <h4>Non-Destructive Entity Version Control</h4>
+            <p>Unlike standard SQL <code>UPDATE</code> or <code>DELETE</code> operations which destroy history, every change creates an immutable snapshot node. Rollbacks restore by appending a new version (e.g. <code>v4 [RESTORED from v1]</code>), preserving complete chronological audit compliance.</p>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-number">02</div>
+            <h4>Cryptographic Tamper-Evident Chaining</h4>
+            <p>Each audit event calculates its SHA-256 hash incorporating the previous record's hash alongside the payload: <code>CurrentHash = SHA256(payload + PrevHash)</code>. Any unauthorized direct database row alteration immediately breaks the mathematical chain.</p>
+          </div>
+
+          <div class="arch-card">
+            <div class="arch-number">03</div>
+            <h4>3NF Relational Data Integrity</h4>
+            <p>Database normalization strictly eliminates redundant records across student host profiles, warden resolution queues, visitor passes, and blacklist registries, backed by automated transaction safety.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section class="section-padding" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Competencies</div>
+        <h2 class="section-title">Technical Skills &amp; Stack</h2>
+        <p class="section-subtitle">Core technologies applied across production web applications and database architectures.</p>
+      </div>
+
+      <div class="skills-category-grid">
+        
+        <div class="skills-box">
+          <div class="skills-box-header">
+            <span class="box-icon">💻</span>
+            <h3>Languages</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item"><span>JavaScript (ES6+)</span><span class="level-tag">Advanced</span></div>
+            <div class="skill-item"><span>Python 3</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>SQL (PostgreSQL / SQLite)</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>HTML5 &amp; CSS3</span><span class="level-tag">Advanced</span></div>
+          </div>
+        </div>
+
+        <div class="skills-box">
+          <div class="skills-box-header">
+            <span class="box-icon">🎨</span>
+            <h3>Frontend Stack</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item"><span>React.js (React 18)</span><span class="level-tag">Advanced</span></div>
+            <div class="skill-item"><span>Vite</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>Tailwind CSS</span><span class="level-tag">Advanced</span></div>
+            <div class="skill-item"><span>Bootstrap 5</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>Recharts &amp; Chart.js</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>Responsive UI / UX</span><span class="level-tag">Advanced</span></div>
+          </div>
+        </div>
+
+        <div class="skills-box">
+          <div class="skills-box-header">
+            <span class="box-icon">⚙️</span>
+            <h3>Backend &amp; Microservices</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item"><span>Node.js</span><span class="level-tag">Advanced</span></div>
+            <div class="skill-item"><span>Express.js</span><span class="level-tag">Advanced</span></div>
+            <div class="skill-item"><span>Flask (Python)</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>RESTful API Design</span><span class="level-tag">Advanced</span></div>
+            <div class="skill-item"><span>Middleware &amp; Routing</span><span class="level-tag">Proficient</span></div>
+          </div>
+        </div>
+
+        <div class="skills-box">
+          <div class="skills-box-header">
+            <span class="box-icon">🗄️</span>
+            <h3>Databases &amp; ORMs</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item"><span>PostgreSQL</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>SQLite3</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>Prisma ORM</span><span class="level-tag">Advanced</span></div>
+            <div class="skill-item"><span>SQLAlchemy</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>3NF Normalization</span><span class="level-tag">Proficient</span></div>
+          </div>
+        </div>
+
+        <div class="skills-box">
+          <div class="skills-box-header">
+            <span class="box-icon">🛡️</span>
+            <h3>Security &amp; Architecture</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item"><span>Role-Based Access Control (RBAC)</span><span class="level-tag">Advanced</span></div>
+            <div class="skill-item"><span>JWT Authentication</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>SHA-256 Hash Chaining</span><span class="level-tag">Advanced</span></div>
+            <div class="skill-item"><span>Maker-Checker Governance</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>PBKDF2 &amp; Bcrypt Hashing</span><span class="level-tag">Proficient</span></div>
+          </div>
+        </div>
+
+        <div class="skills-box">
+          <div class="skills-box-header">
+            <span class="box-icon">🚀</span>
+            <h3>DevOps &amp; Platforms</h3>
+          </div>
+          <div class="skills-list">
+            <div class="skill-item"><span>Git &amp; GitHub</span><span class="level-tag">Advanced</span></div>
+            <div class="skill-item"><span>Render Cloud Hosting</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>Monorepo Architecture</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>Linux / Arch Linux</span><span class="level-tag">Proficient</span></div>
+            <div class="skill-item"><span>Postman API Testing</span><span class="level-tag">Proficient</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section-padding bg-alt" id="education">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Academics</div>
+        <h2 class="section-title">Education &amp; Background</h2>
+      </div>
+
+      <div class="education-card">
+        <div class="edu-top">
+          <div>
+            <h3 class="edu-school">Sri Ramakrishna Institute of Technology (Autonomous)</h3>
+            <div class="edu-sub">Coimbatore, Tamil Nadu, India &bull; Anna University Affiliated</div>
+          </div>
+          <div class="edu-badge">Register No: <strong>71382502162</strong></div>
+        </div>
+
+        <div class="edu-program">
+          <strong>Bachelor of Engineering (B.E.)</strong> &mdash; Engineering &amp; Technology
+        </div>
+
+        <div class="edu-coursework">
+          <span class="course-label">Key Subjects:</span>
+          Data Structures &amp; Algorithms, Database Management Systems (DBMS), Web Technologies, Operating Systems, Computer Networks, Software Engineering, Object-Oriented Programming.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Preview Strip -->
+  <section class="section-padding" id="resume-banner">
+    <div class="container">
+      <div class="resume-cta-box">
+        <div class="resume-cta-text">
+          <h3>Need a Printable Resume?</h3>
+          <p>View or print my ATS-optimized, high-impact resume formatted in both HTML/PDF and standard Markdown.</p>
+        </div>
+        <div class="resume-cta-actions">
+          <a href="resume/index.html" target="_blank" class="btn btn-primary">
+            <span>Open Printable Resume</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section-padding bg-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Let's Connect</div>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">Interested in collaborating or discussing full-stack software engineering opportunities?</p>
+      </div>
+
+      <div class="contact-card-grid">
+        
+        <div class="contact-box">
+          <div class="contact-box-icon">✉️</div>
+          <h4>Email Address</h4>
+          <p class="contact-value" id="email-text">71382502162.sivamani@sritcbe.ac.in</p>
+          <div class="contact-btn-row">
+            <a href="mailto:71382502162.sivamani@sritcbe.ac.in" class="btn btn-sm btn-primary">Send Email</a>
+            <button onclick="copyEmail()" class="btn btn-sm btn-secondary" id="copy-btn">Copy Address</button>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <div class="contact-box-icon">🐙</div>
+          <h4>GitHub</h4>
+          <p class="contact-value">github.com/SIVAMANI-arch</p>
+          <div class="contact-btn-row">
+            <a href="https://github.com/SIVAMANI-arch" target="_blank" rel="noopener" class="btn btn-sm btn-primary">View GitHub</a>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <div class="contact-box-icon">💼</div>
+          <h4>LinkedIn</h4>
+          <p class="contact-value">linkedin.com/in/sivamani-k-454186397</p>
+          <div class="contact-btn-row">
+            <a href="https://www.linkedin.com/in/sivamani-k-454186397/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Connect on LinkedIn</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">&lt;Sivamani.K /&gt;</div>
+        <p>Built with clean HTML5, CSS3, and JavaScript. Zero bloated dependencies.</p>
+      </div>
+      <div class="footer-right">
+        <p>&copy; 2026 Sivamani K. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

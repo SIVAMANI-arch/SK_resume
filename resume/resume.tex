@@ -1,0 +1,148 @@
+%-------------------------
+% Resume in Latex
+% Author : Sivamani K
+% Based on: Jake Gutierrez template (MIT License)
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Sivamani K} \\ \vspace{2pt}
+    \small Coimbatore, Tamil Nadu, India $|$ \href{mailto:71382502162.sivamani@sritcbe.ac.in}{\underline{71382502162.sivamani@sritcbe.ac.in}} \\
+    \href{https://github.com/SIVAMANI-arch}{\underline{github.com/SIVAMANI-arch}} $|$
+    \href{https://www.linkedin.com/in/sivamani-k-454186397/}{\underline{linkedin.com/in/sivamani-k-454186397}} $|$
+    \href{https://hostelvistor.onrender.com/login}{\underline{hostelvistor.onrender.com}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Sri Ramakrishna Institute of Technology (Autonomous)}{Coimbatore, India}
+      {Bachelor of Engineering (B.E.) -- Anna University Affiliated (Reg: 71382502162)}{Expected 2026 / 2027}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework}: Data Structures \& Algorithms, Database Management Systems (DBMS), Web Development, Operating Systems, Computer Networks, Software Engineering.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript (ES6+), Python 3, SQL (PostgreSQL, SQLite), HTML5, CSS3} \\
+     \textbf{Frontend}{: React.js, Vite, Tailwind CSS, Bootstrap 5, Recharts, Chart.js, Axios, Responsive UI} \\
+     \textbf{Backend \& APIs}{: Node.js, Express.js, Python Flask, RESTful APIs, MVC Architecture, Middleware Design} \\
+     \textbf{Databases \& ORMs}{: PostgreSQL, SQLite3, Prisma ORM, SQLAlchemy, 3NF Normalization, Migrations} \\
+     \textbf{Security \& Architecture}{: Role-Based Access Control (RBAC), JWT, SHA-256 Hash Chaining, PBKDF2/Bcrypt, Maker-Checker} \\
+     \textbf{Tools \& Platforms}{: Git, GitHub, Render (Production Cloud Hosting), Monorepo Architecture, Linux/Arch Linux, Postman}
+    }}
+ \end{itemize}
+
+%-----------PROJECTS-----------
+\section{Key Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Hostel Visitor Management System (HVMS)} $|$ \emph{React.js, Node.js, Express, PostgreSQL, Prisma, JWT, QR}}{Live: \href{https://hostelvistor.onrender.com/login}{\underline{hostelvistor.onrender.com}}}
+          \resumeItemListStart
+            \resumeItem{Architected and deployed a production full-stack monorepo web platform serving 5 user personas (Super Admin, Hostel Admin, Wardens, Security Guards, Students) with strict RBAC boundary isolation.}
+            \resumeItem{Engineered cryptographic pass token generation with instant QR validation at security gates, reducing visitor clearance latency by 70\% and eliminating manual paper registers.}
+            \resumeItem{Built real-time gate walk-in registration with webcam ID photo capture and push notification pipeline for instant student approvals.}
+            \resumeItem{Designed 3NF normalized schema via Prisma ORM for blacklist enforcement, visit timeline auditing, and automated PDF/Excel export engines (\texttt{pdfkit}, \texttt{exceljs}).}
+            \resumeItem{Delivered a responsive interface using Vite, React 18, Tailwind CSS, and Recharts analytics dashboards.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{BankVCS 2.0 -- Intelligent Banking \& Version Control} $|$ \emph{Python 3, Flask, SQLAlchemy, SQLite, SHA-256}}{Live: \href{https://banking-application-version-control-4.onrender.com/}{\underline{bankvcs.onrender.com}}}
+          \resumeItemListStart
+            \resumeItem{Built non-destructive Git-like database entity version control (\texttt{v1 $\rightarrow$ v2 $\rightarrow$ v3 $\rightarrow$ RESTORE(v1) $\rightarrow$ v4}) featuring side-by-side JSON field-level diff inspection.}
+            \resumeItem{Implemented blockchain-inspired SHA-256 hash chaining across audit log streams with real-time on-demand mathematical continuity verification.}
+            \resumeItem{Engineered deterministic 0--100 transaction risk intelligence scoring analyzing transfer velocity, balance depletion rates, and beneficiary cooling-off periods.}
+            \resumeItem{Enforced Maker-Checker administrative authorization workflows for entity rollbacks, active session tracking, and multi-portal isolation.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE & HIGHLIGHTS-----------
+\section{Engineering Highlights \& Practices}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Cloud Deployment \& DevOps}{: Deployed and configured full-stack web applications on Render with automated environment build pipelines, CORS configuration, and fault-tolerant startup fallbacks.} \\
+     \textbf{Security-First Engineering}{: Implemented tamper-evident cryptographic hash chains, defensive input sanitization, token revocation, and strict authorization guards across all client and API routes.} \\
+     \textbf{Collaborative Version Control}{: Experienced in GitHub team workflows, issue tracking, Git branch lifecycle, and modular monorepo directory structures.}
+    }}
+ \end{itemize}
+
+\end{document}
