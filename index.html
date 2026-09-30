@@ -7,10 +7,13 @@
   <meta name="description" content="Portfolio of Sivamani K - Full-Stack Software Engineer specializing in React, Node.js, Python/Flask, PostgreSQL, and secure cryptographic architectures.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Ambient Interactive Background Canvas -->
+  <canvas id="ambient-canvas"></canvas>
 
   <!-- Navigation Bar -->
   <header class="navbar-wrapper">
@@ -22,6 +25,7 @@
       <div class="nav-menu" id="nav-menu">
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
+        <a href="#labs" class="nav-link">Interactive Labs <span class="nav-hot">Live</span></a>
         <a href="#architecture" class="nav-link">Architecture</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#education" class="nav-link">Education</a>
@@ -29,6 +33,13 @@
       </div>
 
       <div class="nav-actions">
+        <!-- Quick Command Palette Button -->
+        <button id="cmd-palette-btn" class="cmd-pill" title="Press Ctrl + K / ⌘K to open command palette">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <span class="cmd-text">Search</span>
+          <kbd>Ctrl K</kbd>
+        </button>
+
         <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
           <svg class="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
           <svg class="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
@@ -52,21 +63,24 @@
       <div class="hero-content">
         <div class="status-badge">
           <span class="status-dot"></span>
-          <span>Available for Engineering Roles &amp; Opportunities</span>
+          <span>Available for Engineering Roles &amp; Open Source Collaborations</span>
         </div>
 
         <h1 class="hero-title">
-          Architecting <span class="gradient-text">production-grade</span> systems &amp; data security.
+          Engineering <span class="gradient-text">tamper-evident</span> web platforms &amp; secure systems.
         </h1>
 
         <p class="hero-subtitle">
-          Hi, I'm <strong>Sivamani K</strong> &mdash; a Full-Stack Software Engineer with deep hands-on expertise in building scalable web architectures, non-destructive database versioning, and cryptographic audit pipelines with <strong>React.js, Node.js, Python, and PostgreSQL</strong>.
+          Hi, I'm <strong>Sivamani K</strong> &mdash; a Full-Stack Software Engineer with proven hands-on experience building production web applications, non-destructive database version control, and cryptographic audit pipelines using <strong>React.js, Node.js, Python, and PostgreSQL</strong>.
         </p>
 
         <div class="hero-cta-group">
           <a href="#projects" class="btn btn-primary">
             <span>Explore Featured Projects</span>
             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+          </a>
+          <a href="#labs" class="btn btn-accent-glow">
+            <span>🧪 Try Live Interactive Labs</span>
           </a>
           <a href="#contact" class="btn btn-secondary">
             <span>Get in Touch</span>
@@ -133,7 +147,7 @@
           <div class="project-highlights">
             <div class="highlight-item">
               <span class="highlight-icon">⚡</span>
-              <span><strong>Dynamic QR Gate Scanner:</strong> Generates tamper-proof token passes validated at security gates in sub-second time.</span>
+              <span><strong>Dynamic QR Gate Scanner:</strong> Generates cryptographic token passes validated at security gates in sub-second time.</span>
             </div>
             <div class="highlight-item">
               <span class="highlight-icon">📷</span>
@@ -233,8 +247,151 @@
     </div>
   </section>
 
+  <!-- UNIQUE FEATURE: Interactive Engineering Labs Sandbox -->
+  <section class="section-padding bg-alt" id="labs">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Interactive Sandbox</div>
+        <h2 class="section-title">Test My Systems Live in Your Browser</h2>
+        <p class="section-subtitle">Real in-browser demonstrations of the cryptographic algorithms and gate workflows I engineered.</p>
+      </div>
+
+      <div class="labs-container">
+        
+        <!-- Lab 1: BankVCS Cryptographic SHA-256 Hash Chain Verifier -->
+        <div class="lab-card">
+          <div class="lab-header">
+            <div class="lab-badge">BankVCS Core Security</div>
+            <h3 class="lab-title">Live SHA-256 Audit Hash Chain Simulator</h3>
+            <p class="lab-desc">Type new transactions or tamper with historical records to see the cryptographic integrity chain respond in real time via the native WebCrypto API.</p>
+          </div>
+
+          <div class="chain-visualizer" id="chain-visualizer">
+            <!-- Block 1 -->
+            <div class="block-card" id="block-1">
+              <div class="block-top">
+                <span class="block-index">Block #1 (Genesis)</span>
+                <span class="block-status valid">VALID</span>
+              </div>
+              <div class="block-data-field">
+                <label>Audit Action:</label>
+                <input type="text" class="block-input" value="ACCOUNT_CREATED: Rohan Sharma (Acc# 90012)" oninput="updateHashChain()">
+              </div>
+              <div class="block-hash-field">
+                <div class="hash-row"><span class="hash-label">Prev:</span> <span class="hash-val dim">0000000000000000...</span></div>
+                <div class="hash-row"><span class="hash-label">Hash:</span> <span class="hash-val" id="hash-1">calculating...</span></div>
+              </div>
+            </div>
+
+            <div class="chain-connector">➔</div>
+
+            <!-- Block 2 -->
+            <div class="block-card" id="block-2">
+              <div class="block-top">
+                <span class="block-index">Block #2</span>
+                <span class="block-status valid">VALID</span>
+              </div>
+              <div class="block-data-field">
+                <label>Audit Action:</label>
+                <input type="text" class="block-input" id="block-2-input" value="TRANSFER: ₹25,000 to Beneficiary Suresh" oninput="updateHashChain()">
+              </div>
+              <div class="block-hash-field">
+                <div class="hash-row"><span class="hash-label">Prev:</span> <span class="hash-val" id="prev-2">calculating...</span></div>
+                <div class="hash-row"><span class="hash-label">Hash:</span> <span class="hash-val" id="hash-2">calculating...</span></div>
+              </div>
+            </div>
+
+            <div class="chain-connector">➔</div>
+
+            <!-- Block 3 -->
+            <div class="block-card" id="block-3">
+              <div class="block-top">
+                <span class="block-index">Block #3</span>
+                <span class="block-status valid">VALID</span>
+              </div>
+              <div class="block-data-field">
+                <label>Audit Action:</label>
+                <input type="text" class="block-input" value="VERSION_RESTORE: Entity restored to v1" oninput="updateHashChain()">
+              </div>
+              <div class="block-hash-field">
+                <div class="hash-row"><span class="hash-label">Prev:</span> <span class="hash-val" id="prev-3">calculating...</span></div>
+                <div class="hash-row"><span class="hash-label">Hash:</span> <span class="hash-val" id="hash-3">calculating...</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-actions">
+            <div class="chain-banner" id="chain-status-banner">
+              <span class="banner-icon">🛡️</span>
+              <span id="chain-status-text">Cryptographic Audit Chain Continuity: 100% Verified.</span>
+            </div>
+            <div class="lab-btn-group">
+              <button class="btn btn-sm btn-secondary" onclick="simulateTampering()">⚠️ Simulate Malicious Database Tampering</button>
+              <button class="btn btn-sm btn-outline" onclick="resetHashChain()">🔄 Reset Chain</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lab 2: HVMS QR Gate Pass Generator -->
+        <div class="lab-card">
+          <div class="lab-header">
+            <div class="lab-badge">HVMS Gate Architecture</div>
+            <h3 class="lab-title">Dynamic Gate Pass &amp; QR Validation Simulator</h3>
+            <p class="lab-desc">Simulate a student issuing an instantaneous visitor pass and watch the security gate validation token generate dynamically.</p>
+          </div>
+
+          <div class="pass-simulator-grid">
+            <div class="pass-form">
+              <div class="input-group">
+                <label>Visitor Full Name</label>
+                <input type="text" id="sim-visitor-name" value="Amit Kumar" class="form-control">
+              </div>
+              <div class="input-group">
+                <label>Host Student &amp; Room</label>
+                <input type="text" id="sim-host-name" value="Rohan Sharma (Room 101, Block A1)" class="form-control">
+              </div>
+              <div class="input-group">
+                <label>Visit Purpose</label>
+                <input type="text" id="sim-purpose" value="Study Materials &amp; Notes Handover" class="form-control">
+              </div>
+              <button class="btn btn-sm btn-primary" onclick="generateSimPass()" style="margin-top: 0.5rem; width: 100%;">
+                <span>Issue &amp; Verify Digital Pass</span>
+              </button>
+            </div>
+
+            <!-- Digital Pass Card Output -->
+            <div class="digital-pass-card" id="digital-pass-card">
+              <div class="pass-top">
+                <div class="pass-institution">Aryabhata Boys Hostel</div>
+                <div class="pass-status-pill approved" id="pass-status-pill">APPROVED ✓</div>
+              </div>
+              <div class="pass-body">
+                <div class="pass-qr-box">
+                  <div class="mock-qr-code">
+                    <div class="qr-square q1"></div>
+                    <div class="qr-square q2"></div>
+                    <div class="qr-square q3"></div>
+                    <div class="qr-center-pattern"></div>
+                  </div>
+                  <div class="pass-token-text" id="pass-token-display">PASS_TOKEN_5A1D6B8C</div>
+                </div>
+                <div class="pass-meta">
+                  <div class="meta-row"><span class="m-label">Visitor:</span> <strong id="pass-visitor-display">Amit Kumar</strong></div>
+                  <div class="meta-row"><span class="m-label">Host:</span> <span id="pass-host-display">Rohan Sharma (101)</span></div>
+                  <div class="meta-row"><span class="m-label">Gate:</span> <span>Main Gate 1 (Guard Terminal)</span></div>
+                  <div class="meta-row"><span class="m-label">Cleared:</span> <span class="t-success" id="pass-time-display">Today, Valid 4 Hours</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Interactive Terminal & Architecture Section -->
-  <section class="section-padding bg-alt" id="architecture">
+  <section class="section-padding" id="architecture">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">System Design</div>
@@ -294,7 +451,7 @@
   </section>
 
   <!-- Technical Skills Section -->
-  <section class="section-padding" id="skills">
+  <section class="section-padding bg-alt" id="skills">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Competencies</div>
@@ -393,7 +550,7 @@
   </section>
 
   <!-- Education Section -->
-  <section class="section-padding bg-alt" id="education">
+  <section class="section-padding" id="education">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Academics</div>
@@ -422,7 +579,7 @@
   </section>
 
   <!-- Resume Preview Strip -->
-  <section class="section-padding" id="resume-banner">
+  <section class="section-padding bg-alt" id="resume-banner">
     <div class="container">
       <div class="resume-cta-box">
         <div class="resume-cta-text">
@@ -440,7 +597,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="section-padding bg-alt" id="contact">
+  <section class="section-padding" id="contact">
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Let's Connect</div>
@@ -487,13 +644,100 @@
     <div class="container footer-container">
       <div class="footer-left">
         <div class="footer-logo">&lt;Sivamani.K /&gt;</div>
-        <p>Built with clean HTML5, CSS3, and JavaScript. Zero bloated dependencies.</p>
+        <p>Crafted with clean HTML5, CSS3, and JavaScript. Zero external runtime bloat.</p>
       </div>
       <div class="footer-right">
-        <p>&copy; 2026 Sivamani K. All rights reserved.</p>
+        <p>&copy; 2026 Sivamani K. Designed for high performance.</p>
       </div>
     </div>
   </footer>
+
+  <!-- Command Palette Modal (Ctrl + K) -->
+  <div class="cmd-overlay" id="cmd-overlay">
+    <div class="cmd-modal">
+      <div class="cmd-search-bar">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        <input type="text" id="cmd-input" placeholder="Type a command or jump to section..." autocomplete="off">
+        <span class="cmd-esc-tag">ESC</span>
+      </div>
+
+      <div class="cmd-results" id="cmd-results">
+        <div class="cmd-group-title">Navigation &amp; Actions</div>
+        
+        <div class="cmd-item" onclick="executeCmd('resume')">
+          <span class="cmd-icon">📄</span>
+          <div class="cmd-info">
+            <div class="cmd-name">Open Printable Resume</div>
+            <div class="cmd-desc">View ATS-optimized HTML &amp; PDF resume</div>
+          </div>
+          <span class="cmd-badge">Jump</span>
+        </div>
+
+        <div class="cmd-item" onclick="executeCmd('hvms')">
+          <span class="cmd-icon">⚡</span>
+          <div class="cmd-info">
+            <div class="cmd-name">Launch HVMS Live Production App</div>
+            <div class="cmd-desc">Hostel Visitor Management System on Render</div>
+          </div>
+          <span class="cmd-badge">External</span>
+        </div>
+
+        <div class="cmd-item" onclick="executeCmd('bankvcs')">
+          <span class="cmd-icon">🏦</span>
+          <div class="cmd-info">
+            <div class="cmd-name">Launch BankVCS 2.0 Live Portal</div>
+            <div class="cmd-desc">Intelligent Banking &amp; Version Control</div>
+          </div>
+          <span class="cmd-badge">External</span>
+        </div>
+
+        <div class="cmd-item" onclick="executeCmd('labs')">
+          <span class="cmd-icon">🧪</span>
+          <div class="cmd-info">
+            <div class="cmd-name">Jump to Interactive Labs</div>
+            <div class="cmd-desc">Try SHA-256 hash chaining &amp; QR Pass simulator</div>
+          </div>
+          <span class="cmd-badge">Jump</span>
+        </div>
+
+        <div class="cmd-item" onclick="executeCmd('copy-email')">
+          <span class="cmd-icon">✉️</span>
+          <div class="cmd-info">
+            <div class="cmd-name">Copy Institutional Email</div>
+            <div class="cmd-desc">71382502162.sivamani@sritcbe.ac.in</div>
+          </div>
+          <span class="cmd-badge">Action</span>
+        </div>
+
+        <div class="cmd-item" onclick="executeCmd('github')">
+          <span class="cmd-icon">🐙</span>
+          <div class="cmd-info">
+            <div class="cmd-name">Open GitHub Profile</div>
+            <div class="cmd-desc">github.com/SIVAMANI-arch</div>
+          </div>
+          <span class="cmd-badge">External</span>
+        </div>
+
+        <div class="cmd-item" onclick="executeCmd('linkedin')">
+          <span class="cmd-icon">💼</span>
+          <div class="cmd-info">
+            <div class="cmd-name">Open LinkedIn Profile</div>
+            <div class="cmd-desc">linkedin.com/in/sivamani-k-454186397</div>
+          </div>
+          <span class="cmd-badge">External</span>
+        </div>
+
+        <div class="cmd-item" onclick="executeCmd('theme')">
+          <span class="cmd-icon">🌓</span>
+          <div class="cmd-info">
+            <div class="cmd-name">Toggle Dark / Light Mode</div>
+            <div class="cmd-desc">Switch interface theme preference</div>
+          </div>
+          <span class="cmd-badge">Action</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
